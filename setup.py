@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='faktory',
-      version='0.4.0',
+      version='0.5.0',
       description='Python worker for the Faktory project',
       classifiers=[
           'Development Status :: 3 - Alpha',
