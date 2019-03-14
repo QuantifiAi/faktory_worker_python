@@ -20,3 +20,7 @@ All notable changes to this project will be documented in this file.
 - Added validation if args isn't something faktory will accept
 - Added a pool of threads based worker implementation
 - Compatibility with Faktory 0.7
+
+## 0.5.1 - 2018-02-21
+
+- Added a fix where the worker is gracefully shutdown if BrokenProcessPool error detected
