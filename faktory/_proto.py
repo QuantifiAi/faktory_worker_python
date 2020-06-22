@@ -54,6 +54,7 @@ class Connection:
         self.log = log or logging.getLogger(name='faktory.connection')
 
     def connect(self, worker_id: str = None) -> bool:
+        self.log.info("Isaiah's code here as I connect.")
         self.log.info("Connecting to {}:{}".format(self.host, self.port))
         self.is_connecting = True
 
@@ -106,7 +107,9 @@ class Connection:
             self.socket.close()
             raise FaktoryHandshakeError("Could not connect to Faktory; expected OK from server, but got '{}'".format(ok))
 
+        self.log.debug("Isaiah's code here as I try to connect.")
         self.log.debug("Connected to Faktory")
+        
         self.is_connected, self.is_connecting = True, False
         
         return self.is_connected
@@ -159,7 +162,7 @@ class Connection:
                     else:
                         buffer += more
 
-                        
+
     def select_data(self, buffer_size):
         s = self.socket
         ready = select.select([s], [], [], self.timeout)
